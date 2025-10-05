@@ -5,6 +5,7 @@ import connectDB from "./config/db";
 import authRoutes from "./routes/authRoutes";
 import profileRoutes from "./routes/profileRoutes"
 import projectRoutes from "./routes/projectRoutes"
+import boardRoutes from "./routes/boardRoutes";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import cookieParser from "cookie-parser";
@@ -28,6 +29,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/profile", profileRoutes);
 app.use("/api/projects", projectRoutes);
+app.use("/api/projects", boardRoutes);
 
 const PORT = process.env.PORT || 5000;
 
