@@ -7,6 +7,7 @@ import profileRoutes from "./routes/profileRoutes"
 import projectRoutes from "./routes/projectRoutes"
 import boardRoutes from "./routes/boardRoutes";
 import taskRoutes from "./routes/taskRoutes";
+import commentRoutes from "./routes/commentRoutes";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import cookieParser from "cookie-parser";
@@ -32,6 +33,7 @@ app.use("/api/profile", profileRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/projects", boardRoutes);
 app.use("/api/projects", taskRoutes);
+app.use("/api/comments", commentRoutes);
 
 const PORT = process.env.PORT || 5000;
 
